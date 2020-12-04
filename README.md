@@ -67,7 +67,21 @@ The course references a large volume of freely available on-line learning materi
 
 ## Classes
 
-Term 2, Tuesdays 10am - 1pm
+Term 2
+
+Week 1 - 12th Jan, Tuesday 10am - 1pm
+Week 2 - 19th Jan, Tuesday 10am - 1pm
+Week 3 - 26th Jan, Tuesday 10am - 1pm
+Week 4 - 2nd Feb, **Guest Lecture** Tuesday 5pm
+Week 5 - 9th Feb, Tuesday 10am - 1pm
+Reading Week
+Week 6 - 23rd Feb, Tuesday 10am - 1pm
+Week 7 - 2nd Mar, Tuesday 10am - 1pm
+Week 8 - 9th Mar, **Guest Lecture**
+Week 9 - 16th Mar, **Guest Lecture**
+Week 10 - 23rd Mar, **Project Presentations** Tuesday 10am - 1pm
+
+[all times UK]
 
 ## Tutor
 
