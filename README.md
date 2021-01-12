@@ -101,16 +101,6 @@ Course tutors of this 15 credit module include:
 - Martin de Jode - m.dejode@ucl.ac.uk
 
 
-## Software
-
-The course will make heavy use of the following software packages
-
-  - **Arduino** <br/>
-	xxxxxx.
-
-  - **TensorFlow**<br/>
-	xxxxxxx.
-
 ## Reading List
 
 There is a course reading list under the ReadingLists@UCL facilty which can be accessed here: (https://ucl.rl.talis.com/modules/casa0018.html)
