@@ -13,6 +13,11 @@ See the License for the specific language governing permissions and
 limitations under the License.
 ==============================================================================*/
 
+/*
+ * CASA example using tensorflow lite library 2.4.0 (Feb 2021)
+ * 
+ */
+
 #include <TensorFlowLite.h>
 
 #include "audio_provider.h"
