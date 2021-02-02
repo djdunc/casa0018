@@ -1,0 +1,1 @@
+The CASA version is template code that is about 99% complete - your task is to identify the missing data referencing the book or the built in example in Arduino (micro_speech) to fix the bugs. Once the code compiles in Arduino you should be able to upload it to your nano.
