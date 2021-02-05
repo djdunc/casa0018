@@ -1,14 +1,4 @@
-<!---
-
----
-title: "CASA0018: DL4SN Project Idea"
-author: "Duncan Wilson, Martin De Jode"
-date: "5 Feb 2021"
----
-
--->
-
-# Project Idea 
+# Project Idea
 
 ## Title: Your snappy project title
 
