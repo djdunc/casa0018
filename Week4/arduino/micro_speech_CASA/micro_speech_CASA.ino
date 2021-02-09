@@ -13,6 +13,11 @@ See the License for the specific language governing permissions and
 limitations under the License.
 ==============================================================================*/
 
+/*
+ * CASA example using tensorflow lite library 2.4.0 (Feb 2021)
+ * 
+ */
+
 #include <TensorFlowLite.h>
 
 #include "audio_provider.h"
@@ -84,26 +89,19 @@ void setup() {
   //
   // tflite::AllOpsResolver resolver;
   static tflite::MicroMutableOpResolver<4> micro_op_resolver(error_reporter);
-  if (micro_op_resolver.AddBuiltin(
-          tflite::BuiltinOperator_DEPTHWISE_CONV_2D,
-          tflite::ops::micro::Register_DEPTHWISE_CONV_2D()) != kTfLiteOk) {
+  if (micro_op_resolver.AddDepthwiseConv2D() != kTfLiteOk) {
     return;
   }
-  if (micro_op_resolver.AddBuiltin(
-          tflite::BuiltinOperator_FULLY_CONNECTED,
-          tflite::ops::micro::Register_FULLY_CONNECTED()) != kTfLiteOk) {
+  if (micro_op_resolver.AddFullyConnected() != kTfLiteOk) {
     return;
   }
-  if (micro_op_resolver.AddBuiltin(tflite::BuiltinOperator_SOFTMAX,
-                                   tflite::ops::micro::Register_SOFTMAX()) !=
-      kTfLiteOk) {
+  if (micro_op_resolver.AddSoftmax() != kTfLiteOk) {
     return;
   }
-  if (micro_op_resolver.AddBuiltin(tflite::BuiltinOperator_RESHAPE,
-                                   tflite::ops::micro::Register_RESHAPE()) !=
-      kTfLiteOk) {
+  if (micro_op_resolver.AddReshape() != kTfLiteOk) {
     return;
   }
+
 
 
 
