@@ -1,13 +1,13 @@
-# Project Idea
+f# Project Idea
 
-## Title: Your snappy project title
+## Title: Is this my dog? 
 
 ---
 
 ## Idea: 
 Complete the sentence:
 
-**I want my project to be able to (1) .................... using the (2)............... on my (3)...........**
+**I want my project to be able to (1) check the identiy of a dog using the (2)camera on my (3) Arduino**
 
 
 1. *e.g. detect when i say "wotcha", recognise a bird in a live camera stream etc*
