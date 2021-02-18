@@ -8,4 +8,4 @@ On the other hand by switching the function to cosine the loss for both training
 
 ![alt text](https://github.com/SimoneUCL/casa0018/blob/main/Week3/myWeek3/Cos_loss.png)
 
-![alt text](https://github.com/SimoneUCL/casa0018/blob/main/Week3/myWeek3/Cos_loss_300-500 epochs.png)
+![alt text](https://github.com/SimoneUCL/casa0018/blob/main/Week3/myWeek3/Cos_loss_300-500_epochs.png)
