@@ -5,5 +5,6 @@ The original model applied the sine function to 1000 values in  the  0 - 2π ran
 #### **COSINE MODEL**
 
 On the other hand by switching the function to cosine the loss for both training and the validation drop to close to zero (1.2%); unlike the model with sine as the function to generate data, the loss drops in two statges, with a plateau around 55% between 10 and 100 epochs and a sharper drop following the 100th epoch.
+
 ![alt text](https://github.com/SimoneUCL/casa0018/blob/main/Week3/myWeek3/Cos_loss.png)
 
