@@ -3,4 +3,5 @@ Lab activity for this week entails changing the model provided during the lectur
 The original model applied the sine function to 1000 values in  the  0 - 2π range. The training and validation losses were in the range of 15% before re-training the model. once the model was changed to increase the frequency of the curve the losses raised thre fold. The same happened when keeping the function as per the original model while making the range of data bigger.
 
 
-![alt text](C:\Users\rossi\Google Drive\Colab Notebooks\Week 3\Cos_loss.png)
+(https://github.com/SimoneUCL/casa0018/tree/main/Week3/myWeek3/Cos_loss.png)
+
