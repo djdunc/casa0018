@@ -42,18 +42,22 @@ limitations under the License.
 namespace {
 bool g_is_audio_initialized = false;
 // An internal buffer able to fit 16x our sample size
-constexpr int kAudioCaptureBufferSize = DEFAULT_PDM_BUFFER_SIZE * 16;
+constexpr int kAudioCaptureBufferSize = DEFAULT_PDM_BUFFER_SIZE * 16; // 512 *16 = 8192
 int16_t g_audio_capture_buffer[kAudioCaptureBufferSize];
 // A buffer that holds our output
-int16_t g_audio_output_buffer[kMaxAudioSampleSize];
+int16_t g_audio_output_buffer[kMaxAudioSampleSize]; // 512
 // Mark as volatile so we can check in a while loop to see if
 // any samples have arrived yet.
 volatile int32_t g_latest_audio_timestamp = 0;
 }  // namespace
 
 void CaptureSamples() {
+
   // This is how many bytes of new data we have each time this is called
   const int number_of_samples = DEFAULT_PDM_BUFFER_SIZE;
+  // fix from bug at https://github.com/tensorflow/tensorflow/pull/45878/commits/e26608d3969ed56345ebbf67dbcf7b579ba07bba
+  // const int number_of_samples = DEFAULT_PDM_BUFFER_SIZE / sizeof(int16_t); // 512 / 2 = 256
+  
   // Calculate what timestamp the last audio sample represents
   const int32_t time_in_ms =
       g_latest_audio_timestamp +
@@ -61,8 +65,13 @@ void CaptureSamples() {
   // Determine the index, in the history of all samples, of the last sample
   const int32_t start_sample_offset =
       g_latest_audio_timestamp * (kAudioSampleFrequency / 1000);
+
+  
   // Determine the index of this sample in our ring buffer
   const int capture_index = start_sample_offset % kAudioCaptureBufferSize;
+  // fix from bug at https://github.com/tensorflow/tensorflow/pull/45878/commits/e26608d3969ed56345ebbf67dbcf7b579ba07bba
+  //const int capture_index = (start_sample_offset * sizeof(int16_t)) % kAudioCaptureBufferSize;
+  
   // Read the data to the correct place in our buffer
   PDM.read(g_audio_capture_buffer + capture_index, DEFAULT_PDM_BUFFER_SIZE);
   // This is how we let the outside world know that new audio data has arrived.
