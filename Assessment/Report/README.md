@@ -6,6 +6,7 @@ name of author
 - an overview of what the project does
 - your inspiration for making the project 
 - examples that it is based on. 
+- My project goal is on the Arduino platform achieved the identification of whether wearing masks, specific inspiration is derived from the new GOVID 19 epidemic situation, while existing vaccines, go out with mask is still necessary, but not all the people wear masks. The aim of the project is to make a mask recognition machine and be able to use it anytime and anywhere by cameras 
 
 *probably ~200 words and images are good!*
 
