@@ -31,9 +31,13 @@ Data sets of mask recognition cases from several GitHub and some pictures of me 
 *probably ~200 words and images of what the data 'looks like' are good!*
 
 ## Model
+In combination with what I have learned from books and classes, I analyze that the essence of mask recognition is binary classification of image recognition. Therefore, I select CNN model, a convolutional neural network commonly used in image recognition, and take the model code of the case of cat and dog fight as a reference. I have not tried other model architectures for the time being.
+
 This is a Deep Learning project! What model architecture did you use? Did you try different ones? Why did you choose the ones you did?
 
 *probably ~200 words and a diagram is usually good to describe your model!*
+
+At present, the experiment realizes the data set uploading, data set cleaning, and the data set is divided into training set and test set according to the ratio of 0.8:0.2
 
 ## Experiments
 What experiments did you run to test your project? What parameters did you change? How did you measure performance? Did you write any scripts to evaluate performance? Did you use any tools to evaluate performance? Do you have graphs of results? 
