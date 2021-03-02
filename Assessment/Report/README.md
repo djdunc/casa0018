@@ -11,7 +11,7 @@ name of author
 *probably ~200 words and images are good!*
 
 ## Research Question
-What is the problem you are trying to solve
+Tensorflow2.0 was used to build and train the convolutional neural network (CNN) image recognition dicclassification model, and the simplified model was run on the Arduino 33BLE platform, combined with the camera to realize mask recognition.
 
 *probably 1 or 2 sentences*
 
@@ -21,7 +21,11 @@ Thinking back to the various application diagrams you have seen through the modu
 *probably ~200 words and a diagram is usually good to convey your design!*
 
 ## Data
-Describe what data sources you have used and any cleaning, wrangling or organising you have done. Including some examples of the data helps others understand what you have been working with.
+Data sets of mask recognition cases from several GitHub have been used to get the pictures of wearing masks and no masks. At present, a total of more than 2000 masks have been collected, including more than 1000 masks worn and unworn respectively. The original data sets have been cleaned, sorted, and stored in two categories respectively, and the pictures have been renamed with serial numbers.The dataset used is shown in the figure.
+![image](https://user-images.githubusercontent.com/72681393/109654824-9da74880-7b9d-11eb-978e-268413a3e475.png)
+
+![image](https://user-images.githubusercontent.com/72681393/109654835-a435c000-7b9d-11eb-96ec-9f1e51f91cda.png)
+
 
 *probably ~200 words and images of what the data 'looks like' are good!*
 
