@@ -21,7 +21,7 @@ Thinking back to the various application diagrams you have seen through the modu
 *probably ~200 words and a diagram is usually good to convey your design!*
 
 ## Data
-Data sets of mask recognition cases from several GitHub have been used to get the pictures of wearing masks and no masks. At present, a total of more than 2000 masks have been collected, including more than 1000 masks worn and unworn respectively. The original data sets have been cleaned, sorted, and stored in two categories respectively, and the pictures have been renamed with serial numbers.The dataset used is shown in the figure.
+Data sets of mask recognition cases from several GitHub and some pictures of me and my family have been used to get the pictures of wearing masks and no masks. In general, a total of more than 2000 masks have been collected, including more than 1000 masks worn and unworn respectively. The original data sets have been cleaned, sorted, and stored in two categories respectively, and the pictures have been renamed with serial numbers.The dataset used is shown in the figure show below.
 
 ![image](https://user-images.githubusercontent.com/72681393/109654824-9da74880-7b9d-11eb-978e-268413a3e475.png)
 
