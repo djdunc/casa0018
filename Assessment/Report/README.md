@@ -1,6 +1,6 @@
 # Mask detect on Arduino Nano 33 BLE
 
-name of author
+ChenYifan
 
 ## Introduction
 - an overview of what the project does
