@@ -22,6 +22,7 @@ Thinking back to the various application diagrams you have seen through the modu
 
 ## Data
 Data sets of mask recognition cases from several GitHub have been used to get the pictures of wearing masks and no masks. At present, a total of more than 2000 masks have been collected, including more than 1000 masks worn and unworn respectively. The original data sets have been cleaned, sorted, and stored in two categories respectively, and the pictures have been renamed with serial numbers.The dataset used is shown in the figure.
+
 ![image](https://user-images.githubusercontent.com/72681393/109654824-9da74880-7b9d-11eb-978e-268413a3e475.png)
 
 ![image](https://user-images.githubusercontent.com/72681393/109654835-a435c000-7b9d-11eb-96ec-9f1e51f91cda.png)
