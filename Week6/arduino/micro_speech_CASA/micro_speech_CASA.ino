@@ -13,23 +13,28 @@ See the License for the specific language governing permissions and
 limitations under the License.
 ==============================================================================*/
 
+
+/*
+ * when updating model make sure to change:
+ * - micro_features_model data
+ * - micro_features_micro_model_settings
+ * - arduino_command_responder
+ */
+
 #include <TensorFlowLite.h>
 
 #include "audio_provider.h"
 #include "command_responder.h"
 #include "feature_provider.h"
-#include "recognize_commands.h"
-
 #include "micro_features_micro_model_settings.h"
 #include "micro_features_model.h"
+#include "recognize_commands.h"
 #include "tensorflow/lite/micro/kernels/micro_ops.h"
 #include "tensorflow/lite/micro/micro_error_reporter.h"
 #include "tensorflow/lite/micro/micro_interpreter.h"
 #include "tensorflow/lite/micro/micro_mutable_op_resolver.h"
 #include "tensorflow/lite/schema/schema_generated.h"
 #include "tensorflow/lite/version.h"
-
-
 
 // Globals, used for compatibility with Arduino-style sketches.
 namespace {
@@ -104,8 +109,6 @@ void setup() {
       kTfLiteOk) {
     return;
   }
-
-
 
   // Build an interpreter to run the model with.
   static tflite::MicroInterpreter static_interpreter(

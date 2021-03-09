@@ -51,12 +51,14 @@ void RespondToCommand(tflite::ErrorReporter* error_reporter,
     TF_LITE_REPORT_ERROR(error_reporter, "Heard %s (%d) @%dms", found_command,
                          score, current_time);
     // If we hear a command, light up the appropriate LED
-    if (found_command[0] == 't') {
+     if (found_command[0] == 'y') {
+    //if (found_command[0] == 'o' && found_command[1] == 'n') {
       last_command_time = current_time;
       digitalWrite(LEDG, LOW);  // Green for yes
     }
 
-    if (found_command[0] == 'b') {
+    if (found_command[0] == 'n') {
+    //if (found_command[0] == 'o' && found_command[1] == 'f') {
       last_command_time = current_time;
       digitalWrite(LEDR, LOW);  // Red for no
     }
