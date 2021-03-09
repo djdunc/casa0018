@@ -13,4 +13,7 @@ Hints on what should go into this page (note each three of these sections are we
 ### Critical reflection and learning from experiments 
 (observations from experiments, factors incluencing results, potential improvements, weaknesses, feedback from reviews) 
 
-Note: you can choose what tools you use to write up and document your project - your final submission will be a pdf document being uploaded via Moodle, however we would also expect to see a link through to your GitHub repository where you data, results etc. are documented.
+
+
+_Note: you can choose what tools you use to write up and document your project - your final submission will be a pdf document being uploaded via Moodle, however we would also expect to see a link through to your GitHub repository where you data, results etc. are documented.
+_
