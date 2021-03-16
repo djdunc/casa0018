@@ -1,6 +1,6 @@
 # Report title goes here
 
-name of author
+name of author, link to github repo with project work in / link to Edge Impulse projects
 
 ## Introduction
 - an overview of what the project does
