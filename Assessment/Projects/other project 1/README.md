@@ -1,3 +1,3 @@
-useful to store examples of your projects in here with your own notes so that in 3 months time you can remember how you did stuff
-
-documenting helps others understand your code where “you” are the primary “other” person.
+The neural network model used in this project is CNN, so when training the model in the cloud, MNISTCNN and CATS_V_DOGS notebook codes used in the class were referred to, and based on CATS_V_DOGS code, mask recognition project was built. The sine wave case provided the reference code for TensorFlow model conversion after training.
+The person_detection and magic_wand examples are reproduced first on Arduino.
+The Magic_Wand example includes both the Arduino side sample code and the TensorFlow Lite official training sample code. The person_detection example does not have the corresponding model training code because the cloud model cannot be directly operational when the project progress to the Arduino local runtime.However, the Magic_Wand case also adopts the CNN model architecture and includes the cloud-Arduino example code, which provides a complete reference from cloud to Arduino for the final migration of the project to Arduino.And solve the problem of how to transplant the trained model to Arduino and work properly.
