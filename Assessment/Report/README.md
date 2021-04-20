@@ -80,9 +80,7 @@ Before using Edge Impulse platform to further optimize the model, the author mai
 
 In the later stage of model training and debugging, the model quantization and transformation issues need to be considered as well as the limited Arduino memory.When adjusting model parameters, a balance should be sought between the accuracy rate and the model size. When the model accuracy is maximum, the model size should also be within the range of the Arduino end.It is found through testing that the Arduino image recognition program of this project can accept the model array with a maximum length of about 80W, which limits the size of the model to a certain extent.
 
-Through experiments, it is found that the reason why the Person_detection example accepts the grayscale image of 96*96 instead of the RGB image is also related to the memory. Compared with the grayscale image, the processing capacity of the RGB image is several times higher, so the program needs more memory to run, which is too much for Arduino, so it will crash and restart.The memory request is shown in the figure.After testing, it is found that the application of 180*1024 static memory reserved for model operation is the limit that Arduino Nano 33ble can provide.
 
-![image](https://user-images.githubusercontent.com/72681393/115418958-834c2b80-a22c-11eb-8d2a-975a4254b7b5.png)
 
 
 What experiments did you run to test your project? What parameters did you change? How did you measure performance? Did you write any scripts to evaluate performance? Did you use any tools to evaluate performance? Do you have graphs of results? 
@@ -91,6 +89,10 @@ What experiments did you run to test your project? What parameters did you chang
 
 ## Results and Observations
 After several attempts, it is found that copying the array directly to the Arduino terminal program cannot run. The serial port monitor will give a prompt of "Invoke Failed".This is due to running out of memory, the input and output dimensions of the model and the MICRO_OP_RESOLVER used.
+
+Through experimenting, it is found that the reason why the Person_detection example accepts the grayscale image of 96*96 instead of the RGB image is also related to the memory. Compared with the grayscale image, the processing capacity of the RGB image is several times higher, so the program needs more memory to run, which is too much for Arduino, so it will crash and restart.The memory request is shown in the figure.After testing, it is found that the application of 180*1024 static memory reserved for model operation is the limit that Arduino Nano 33ble can provide.
+
+![image](https://user-images.githubusercontent.com/72681393/115418958-834c2b80-a22c-11eb-8d2a-975a4254b7b5.png)
 
 Synthesis the main results and observations you made from building the project. Did it work perfectly? Why not? What worked and what didn't? Why? What would you do next if you had more time?  
 
