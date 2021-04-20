@@ -78,6 +78,8 @@ Before using Edge Impulse platform to further optimize the model, the author mai
 ![image](https://user-images.githubusercontent.com/72681393/115417291-15ebcb00-a22b-11eb-9903-c6458cc09b37.png)
 ![image](https://user-images.githubusercontent.com/72681393/115417356-20a66000-a22b-11eb-809a-bff61aef5c23.png)
 
+In the later stage of model training and debugging, the model quantization and transformation issues need to be considered as well as the limited Arduino memory.When adjusting model parameters, a balance should be sought between the accuracy rate and the model size. When the model accuracy is maximum, the model size should also be within the range of the Arduino end.It is found through testing that the Arduino image recognition program of this project can accept the model array with a maximum length of about 80W, which limits the size of the model to a certain extent.
+
 
 What experiments did you run to test your project? What parameters did you change? How did you measure performance? Did you write any scripts to evaluate performance? Did you use any tools to evaluate performance? Do you have graphs of results? 
 
