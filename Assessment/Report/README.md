@@ -46,9 +46,15 @@ The Edge Impulse platform is convenient for batch processing of images. Before t
 ## Model
 Considering that the essence of mask recognition is image binary classification of image recognition. Therefore, the convolutional neural network CNN model, which is commonly used in image recognition, was selected in this project. And the cat and dog fight case was taken as a reference. 
 
-The CNN model architecture used is shown below, including two maxpooling layers and two convolution layers, one Flatten layer, and two Dense layer. The last Dense layer outputs various probabilities with Softmax as the activation function.
+The CNN model architecture used is shown below, including two maxpooling layers and two convolution layers, one Flatten layer, and two Dense layer. The last Dense layer outputs the probabilities of whether wearing a mask with Softmax as the activation function.
 
 ![image](https://user-images.githubusercontent.com/72681393/115414536-b2f93480-a228-11eb-9a9b-9242f625a731.png)
+
+ReLU activation function is adopted in the convolutional layer to reduce the amount of calculation. Compared with Sigmoid's exponential calculation, the convolutional layer is much simpler and there is no saturation problem.
+
+![image](https://user-images.githubusercontent.com/72681393/115415735-bc36d100-a229-11eb-822c-de7c9672d2d6.png)
+
+Softmax is adopted as he activation function of the last layer, the Dense layer.Sigmoid is an exponential function whose output is between 0 and 1, and it is suitable for useing in binary classification problems and represents the output result with probability. More importantly, Softmax is not only applicable to binary classification problems, but also to multiple classification problems. It can output all kinds of probabilities respectively, which is convenient for subsequent expansion of classification.
 
 
 
@@ -59,6 +65,20 @@ This is a Deep Learning project! What model architecture did you use? Did you tr
 At present, the experiment realizes the data set uploading, data set cleaning, and the data set is divided into training set and test set according to the ratio of 0.8:0.2
 
 ## Experiments
+The selection of model architecture is mainly based on two cases: cat fighting and dog fighting and Magic_Wand.In the early stage of model training and debugging, due to the small number of data sets, although the training accuracy rate is very high, the test accuracy rate is low, unable to correctly reflect the relationship between the model parameter changes and the change of accuracy rate. After the increase to 2000 pictures, a relatively large improvement has been made.
+
+The model architecture and operation results of Edge Impulse platform are shown below. The learning rate and the number of training rounds are set as 0.0005 and 50 respectively. The grayscale images of 96*96 size are used as input to output the probability of wearing masks and not wearing masks respectively.
+
+![image](https://user-images.githubusercontent.com/72681393/115416878-b988ab80-a22a-11eb-9c94-104ae3f34e7c.png)
+
+As can be seen from the picture, the probability of correctly identifying the two categories in the confusion matrix display is about 80%, which is not accurate enough. However, due to the limitations of the model size, further optimization parameters are limited to improve the accuracy.The model architecture can be further optimized and further optimized by data set expansion to improve the accuracy.
+
+Before using Edge Impulse platform to further optimize the model, the author mainly uses Colab Notebook to build the code for model training. The model parameters and training results are shown below.
+
+![image](https://user-images.githubusercontent.com/72681393/115417291-15ebcb00-a22b-11eb-9903-c6458cc09b37.png)
+![image](https://user-images.githubusercontent.com/72681393/115417356-20a66000-a22b-11eb-809a-bff61aef5c23.png)
+
+
 What experiments did you run to test your project? What parameters did you change? How did you measure performance? Did you write any scripts to evaluate performance? Did you use any tools to evaluate performance? Do you have graphs of results? 
 
 *probably ~300 words and graphs and tables are usually good to convey your results!*
