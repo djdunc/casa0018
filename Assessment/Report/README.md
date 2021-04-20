@@ -26,20 +26,31 @@ The model training was carried out on the Google platform and Edge Impulse platf
 
 Arduino can recognize whether people are wearing masks in real time according to the images sent back by the camera, and output the results through the serial port. At the same time, the color of the on-board RGB light can be changed according to the results.
 
-*probably ~200 words and a diagram is usually good to convey your design!*
+
 
 ## Data
-Data sets of mask recognition cases from several GitHub and some pictures of me and my family have been used to get the pictures of wearing masks and no masks. In general, a total of more than 2000 masks have been collected, including more than 1000 masks worn and unworn respectively. The original data sets have been cleaned, sorted, and stored in two categories respectively, and the pictures have been renamed with serial numbers.The dataset used is shown in the figure show below.
+Data sets of mask recognition cases from several GitHub and some pictures of me and my family have been used to get the pictures of wearing masks and no masks. In general, a total of more than 2000 masks have been collected, including more than 1000 masks worn and unworn respectively. The original data sets have been cleaned, classified, and stored in two categories respectively, and the pictures have been renamed with serial numbers.The dataset used is shown below.
 
 ![image](https://user-images.githubusercontent.com/72681393/109654824-9da74880-7b9d-11eb-978e-268413a3e475.png)
 
 ![image](https://user-images.githubusercontent.com/72681393/109654835-a435c000-7b9d-11eb-96ec-9f1e51f91cda.png)
 
+The model receives grayscale images with a size of 96*96 as input, so it is necessary to preprocess the images of the data set.
+The Edge Impulse platform is convenient for batch processing of images. Before that, the code for image processing in the Colab Notebook is shown below, which can scale and gray scale images in batches.
+
+![image](https://user-images.githubusercontent.com/72681393/115412134-a70c7300-a226-11eb-94b5-89dff2b8b7b2.png)
+
 
 *probably ~200 words and images of what the data 'looks like' are good!*
 
 ## Model
-In combination with what I have learned from books and classes, I analyze that the essence of mask recognition is binary classification of image recognition. Therefore, I select CNN model, a convolutional neural network commonly(CNN) used in image recognition in this project, and take the model code of the case of cat and dog fight as a reference. 
+Considering that the essence of mask recognition is image binary classification of image recognition. Therefore, the convolutional neural network CNN model, which is commonly used in image recognition, was selected in this project. And the cat and dog fight case was taken as a reference. 
+
+The CNN model architecture used is shown below, including two maxpooling layers and two convolution layers, one Flatten layer, and two Dense layer. The last Dense layer outputs various probabilities with Softmax as the activation function.
+
+![image](https://user-images.githubusercontent.com/72681393/115414536-b2f93480-a228-11eb-9a9b-9242f625a731.png)
+
+
 
 This is a Deep Learning project! What model architecture did you use? Did you try different ones? Why did you choose the ones you did?
 
