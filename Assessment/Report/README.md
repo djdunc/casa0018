@@ -17,12 +17,14 @@ How to build and train a Convolutional Neural Network (CNN) image recognition cl
 
 ## Application Overview
 The overall structure of the project is shown below. The Saved Model is taken as the boundary to divide the project work into two parts: Model training and Model running.
+
 ![image](https://user-images.githubusercontent.com/72681393/115410196-036e9300-a225-11eb-913a-ed01c347db38.png)
 
 The model training was carried out on the Google platform and Edge Impulse platform. The required data sets were collected according to the analysis of the project objectives, and the appropriate neural network architecture was selected for model training and model transformation.The model is implemented at the Arduino end. The Arducam module is responsible for sensing the outside world and sending images to the Arduino Nano 33 BLE Sense as the model input. The input data is recognized in real time and the output results are obtained.The Arduino program frame is shown below.
+
 ![image](https://user-images.githubusercontent.com/72681393/115411200-db336400-a225-11eb-8325-4f346ade0284.png)
 
-
+Arduino can recognize whether people are wearing masks in real time according to the images sent back by the camera, and output the results through the serial port. At the same time, the color of the on-board RGB light can be changed according to the results.
 
 *probably ~200 words and a diagram is usually good to convey your design!*
 
