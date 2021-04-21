@@ -3,17 +3,10 @@
 ChenYifan
 
 ## Introduction
-- an overview of what the project does
-- your inspiration for making the project 
-- examples that it is based on. 
-As the COVID-19 epidemic gets worse, more and more people are aware of the importance of wearing masks outside. While existing vaccines, go out with mask is still necessary, but not all the people wear masks, therefore the aim of this project is to realize mask wearing recognition on Arduino Nano 33 BLE. The project goal is on the Arduino platform achieved the identification of whether wearing masks and make a mask recognition machine and be able to use it anytime and anywhere by cameras. This project first wrote code in Colab Notebook for model training, and then adopted Edge Impulse platform for model training.
-
-*probably ~200 words and images are good!*
+As the COVID-19 epidemic gets worse, more and more people are aware of the importance of wearing masks outside. While existing vaccines, go out with mask is still necessary, but not all the people wear masks, therefore the aim of this project is to realize mask wearing recognition on Arduino Nano 33 BLE. The project goal is on the Arduino platform achieved the identification of whether wearing masks and make a mask recognition machine and be able to use it anytime and anywhere by cameras. This project first wrote code in Colab Notebook for model training, and then adopted Edge Impulse platform for model training. 
 
 ## Research Question
-How to build and train a Convolutional Neural Network (CNN) image recognition classification model to realize mask recognition based on Arduino 33 BLE platform and Arducam
-
-*probably 1 or 2 sentences*
+How to build and train a Convolutional Neural Network (CNN) image recognition classification model to realize mask recognition based on Arduino 33 BLE platform and Arducam.
 
 ## Application Overview
 The overall structure of the project is shown below. The Saved Model is taken as the boundary to divide the project work into two parts: Model training and Model running.
@@ -29,7 +22,7 @@ Arduino can recognize whether people are wearing masks in real time according to
 
 
 ## Data
-Data sets of mask recognition cases from several GitHub and some pictures of me and my family have been used to get the pictures of wearing masks and no masks. In general, a total of more than 2000 masks have been collected, including more than 1000 masks worn and unworn respectively. The original data sets have been cleaned, classified, and stored in two categories respectively, and the pictures have been renamed with serial numbers.The dataset used is shown below.
+Data sets of mask recognition cases from several GitHub and some pictures of me and my family have been used to get the pictures of wearing masks and no masks. In general, a total of more than 2000 masks have been collected, including more than 1000 masks worn and unworn respectively. The original data sets have been cleaned, classified, and stored in two categories respectively, and the pictures have been renamed with serial numbers. The dataset used is shown below.
 
 ![image](https://user-images.githubusercontent.com/72681393/109654824-9da74880-7b9d-11eb-978e-268413a3e475.png)
 
@@ -44,9 +37,9 @@ The Edge Impulse platform is convenient for batch processing of images. Before t
 *probably ~200 words and images of what the data 'looks like' are good!*
 
 ## Model
-Considering that the essence of mask recognition is image binary classification of image recognition. Therefore, the convolutional neural network CNN model, which is commonly used in image recognition, was selected in this project. And the cat and dog fight case was taken as a reference. 
-
+Considering that the essence of mask recognition is image binary classification of image recognition. Therefore, the convolutional neural network CNN model, which is commonly used in image recognition was selected in this project. And the cat and dog fight case were taken as a reference.
 The CNN model architecture used is shown below, including two maxpooling layers and two convolution layers, one Flatten layer, and two Dense layer. The last Dense layer outputs the probabilities of whether wearing a mask with Softmax as the activation function.
+
 
 ![image](https://user-images.githubusercontent.com/72681393/115414536-b2f93480-a228-11eb-9a9b-9242f625a731.png)
 
@@ -54,53 +47,38 @@ ReLU activation function is adopted in the convolutional layer to reduce the amo
 
 ![image](https://user-images.githubusercontent.com/72681393/115415735-bc36d100-a229-11eb-822c-de7c9672d2d6.png)
 
-Softmax is adopted as he activation function of the last layer, the Dense layer.Sigmoid is an exponential function whose output is between 0 and 1, and it is suitable for useing in binary classification problems and represents the output result with probability. More importantly, Softmax is not only applicable to binary classification problems, but also to multiple classification problems. It can output all kinds of probabilities respectively, which is convenient for subsequent expansion of classification.
-
-
-
-This is a Deep Learning project! What model architecture did you use? Did you try different ones? Why did you choose the ones you did?
-
-*probably ~200 words and a diagram is usually good to describe your model!*
-
-At present, the experiment realizes the data set uploading, data set cleaning, and the data set is divided into training set and test set according to the ratio of 0.8:0.2
+SoftMax is adopted as the activation function of the last layer, the Dense layer. Sigmoid is an exponential function whose output is between 0 and 1, and it is suitable for using in binary classification problems and represents the output result with probability. More importantly, SoftMax is not only applicable to binary classification problems, but also to multiple classification problems. It can output all kinds of probabilities respectively, which is convenient for subsequent expansion of classification.
 
 ## Experiments
-The selection of model architecture is mainly based on two cases: cat fighting and dog fighting and Magic_Wand.In the early stage of model training and debugging, due to the small number of data sets, although the training accuracy rate is very high, the test accuracy rate is low, unable to correctly reflect the relationship between the model parameter changes and the change of accuracy rate. After the increase to 2000 pictures, a relatively large improvement has been made.
-
-The model architecture and operation results of Edge Impulse platform are shown below. The learning rate and the number of training rounds are set as 0.0005 and 50 respectively. The grayscale images of 96*96 size are used as input to output the probability of wearing masks and not wearing masks respectively.
+The selection of model architecture is mainly based on two cases: cat fighting and dog fighting and Magic_Wand.The model architecture and operation results of Edge Impulse platform are shown below. The learning rate and the number of training rounds are set as 0.0005 and 35 respectively. The grayscale images of 96*96 size are used as input to output the probability of wearing masks and not wearing masks respectively.
 
 ![image](https://user-images.githubusercontent.com/72681393/115416878-b988ab80-a22a-11eb-9c94-104ae3f34e7c.png)
 
-As can be seen from the picture, the probability of correctly identifying the two categories in the confusion matrix display is about 80%, which is not accurate enough. However, due to the limitations of the model size, further optimization parameters are limited to improve the accuracy.The model architecture can be further optimized and further optimized by data set expansion to improve the accuracy.
+It can be seen that the accuracy of model training is higher than the validation rate, so the author added the Dropout layer in the subsequent improvement to reduce the possibility of model overfitting to a certain extent.
+Finally, the training results after adjusting the model parameters are shown in the figure. It can be known from the confusion matrix that the accuracy of the model is about 80%. This is due to the limited memory of Arduino, which inevitably gives up part of the model performance and reduces the model size.
+The online test results of the model are shown in the figure, and the accuracy can be seen…..
 
-Before using Edge Impulse platform to further optimize the model, the author mainly uses Colab Notebook to build the code for model training. The model parameters and training results are shown below.
-
-![image](https://user-images.githubusercontent.com/72681393/115417291-15ebcb00-a22b-11eb-9903-c6458cc09b37.png)
-![image](https://user-images.githubusercontent.com/72681393/115417356-20a66000-a22b-11eb-809a-bff61aef5c23.png)
-
-In the later stage of model training and debugging, the model quantization and transformation issues need to be considered as well as the limited Arduino memory.When adjusting model parameters, a balance should be sought between the accuracy rate and the model size. When the model accuracy is maximum, the model size should also be within the range of the Arduino end.It is found through testing that the Arduino image recognition program of this project can accept the model array with a maximum length of about 80W, which limits the size of the model to a certain extent.
-
-
-
-
-What experiments did you run to test your project? What parameters did you change? How did you measure performance? Did you write any scripts to evaluate performance? Did you use any tools to evaluate performance? Do you have graphs of results? 
-
-*probably ~300 words and graphs and tables are usually good to convey your results!*
 
 ## Results and Observations
-After several attempts, it is found that copying the array directly to the Arduino terminal program cannot run. The serial port monitor will give a prompt of "Invoke Failed".This is due to running out of memory, the input and output dimensions of the model and the MICRO_OP_RESOLVER used.
+The operation of the Arduino terminal is shown in the figure1. The figure2 shows the mask identification output and the identification output without wearing the mask. It can be seen that the program can be successfully identified.
+Behind this result several questions that have been solved one by one:
+1.Model dimension. Arduino operation model requires input grayscale image with the size of 96*96, and the input and output data type of the model must be INT8, otherwise the operation fails. For this reason, the author wrote a script as shown in the figure to verify whether the relevant parameters of the quantized model are consistent.
+ 
+ ![image](https://user-images.githubusercontent.com/72681393/115588543-73524b80-a301-11eb-8561-96d9f3cabbc0.png)
 
-Through experimenting, it is found that the reason why the Person_detection example accepts the grayscale image of 96 *96 instead of the RGB image is also related to the memory. Compared with the grayscale image, the processing capacity of the RGB image is several times higher, so the program needs more memory to run, which is too much for Arduino, so it will crash and restart.The memory request is shown in the figure.After testing, it is found that the application of 180 *1024 static memory reserved for model operation is the limit that Arduino Nano 33ble can provide.
 
-![image](https://user-images.githubusercontent.com/72681393/115418958-834c2b80-a22c-11eb-8d2a-975a4254b7b5.png)
+2.Micro_op_resolver.Simply copying the transformed array directly into the Arduino program will not run successfully because the micro_op_resolver required by the model is not loaded.Referred to the model training of Magic_Wand in the official example of TensorFlow and the Arduino program, the corresponding relationship of this part can be found. After correction, it is successfully solved, as shown in the figure.
+ 
+ ![image](https://user-images.githubusercontent.com/72681393/115588573-7b11f000-a301-11eb-87ac-2eace02692d7.png)
 
-Based on the Person_detection sample program, the author did not pay attention to the model input and output dimensions at first, mainly due to the choice of quantization parameters and the problem of RGB image and grayscale image.RGB images are used for model training, while the Arduino side accepts grayscale image input.In addition, Arduino takes INT8 data type as input and output, which is essential in the parameter selection of model quantization.In order to check whether the quantized model parameters are corresponding to Arduino, the author uses the following program to verify.
 
-![image](https://user-images.githubusercontent.com/72681393/115420297-9a3f4d80-a22d-11eb-9ec0-75d9540cd1ef.png)
+3.Memory issues. The memory here refers to two parts. The first part is the memory required by the model array, and the second part is the memory required by the model operation. The experimental results show that the model array length is not more than 80W and the model running memory KtensorArenaSize is not more than 180*1024.only If these two conditions are satisfied，it can meet the needs of the normal operation of this project.
 
-Synthesis the main results and observations you made from building the project. Did it work perfectly? Why not? What worked and what didn't? Why? What would you do next if you had more time?  
+## Limittion
+For the future improvement if time permits. This project would try to solve these two limitation. 
+1. Multi-classification problem: the third kind of Unknown data set would added on the basis of the current data set, which mainly includes some images of daily life without people.
+2. Add buttons and buzzer components. Users can take photos and identify them by pressing a button, and a buzzer will remind them to wear a mask.
 
-*probably ~300 words and remember images and diagrams bring results to life!*
 
 ## Bibliography
 *If you added any references then add them in here using this format:*
@@ -113,9 +91,9 @@ Synthesis the main results and observations you made from building the project. 
 
 ## Declaration of Authorship
 
-I, AUTHORS NAME HERE, confirm that the work presented in this assessment is my own. Where information has been derived from other sources, I confirm that this has been indicated in the work.
+I, ChenYifan, confirm that the work presented in this assessment is my own. Where information has been derived from other sources, I confirm that this has been indicated in the work.
 
 
-*Digitally Sign by typing your name here*
+![image](https://user-images.githubusercontent.com/72681393/115589022-f5427480-a301-11eb-82f9-8921e13cc0ea.png)
 
-ASSESSMENT DATE
+2021/4/22
