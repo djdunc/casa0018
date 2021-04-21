@@ -32,10 +32,6 @@ The model receives grayscale images with a size of 96*96 as input, so it is nece
 The Edge Impulse platform is convenient for batch processing of images. Before that, the code for image processing in the Colab Notebook is shown below, which can scale and gray scale images in batches.
 
 ![image](https://user-images.githubusercontent.com/72681393/115412134-a70c7300-a226-11eb-94b5-89dff2b8b7b2.png)
-
-
-*probably ~200 words and images of what the data 'looks like' are good!*
-
 ## Model
 Considering that the essence of mask recognition is image binary classification of image recognition. Therefore, the convolutional neural network CNN model, which is commonly used in image recognition was selected in this project. And the cat and dog fight case were taken as a reference.
 The CNN model architecture used is shown below, including two maxpooling layers and two convolution layers, one Flatten layer, and two Dense layer. The last Dense layer outputs the probabilities of whether wearing a mask with Softmax as the activation function.
