@@ -64,11 +64,11 @@ Behind this result several questions that have been solved one by one:
  
  ![image](https://user-images.githubusercontent.com/72681393/115588573-7b11f000-a301-11eb-87ac-2eace02692d7.png)
 
-3.Memory issues. The memory here refers to two parts. The first part is the memory required by the model array, and the second part is the memory required by the model operation. The experimental results show that the model array length is not more than 80W and the model running memory KtensorArenaSize is not more than 180*1024.only If these two conditions are satisfied，it can meet the needs of the normal operation of this project.
+3.Memory issues. The memory here refers to two parts. The first part is the memory required by the model array, and the second part is the memory required by the model operation. The experimental results show that the model array length is not more than 80W and the model running memory KtensorArenaSize is not more than 180*1024. Only If these two conditions are satisfied，it can meet the needs of the normal operation of this project.
 
 ## Limittion
-For the future improvement if time permits. This project would try to solve these two limitation. 
-1. Multi-classification problem: the third kind of Unknown data set would added on the basis of the current data set, which mainly includes some images of daily life without people.
+For the future improvement if time permits. This project would try to solve these two limitations. 
+1. Multi-classification problem: the third kind of Unknown data set would add on the basis of the current data set, which mainly includes some images of daily life without people.
 2. Add buttons and buzzer components. Users can take photos and identify them by pressing a button, and a buzzer will remind them to wear a mask.
 
 
@@ -78,6 +78,10 @@ For the future improvement if time permits. This project would try to solve thes
 1. Last name, First initial. (Year published). Title. Edition. (Only include the edition if it is not the first edition) City published: Publisher, Page(s). http://google.com
 
 2. Last name, First initial. (Year published). Title. Edition. (Only include the edition if it is not the first edition) City published: Publisher, Page(s). http://google.com
+
+4.	GitHub. 2021. X-zhangyang/Real-World-Masked-Face-Dataset. [online] Available at: https://github.com/X-zhangyang/Real-World-Masked-Face-Dataset
+5.	GitHub. 2021. tensorflow/tensorflow/lite/micro/examples/magic_wand/train. [online] Available at: https://github.com/tensorflow/tensorflow/tree/master/tensorflow/lite/micro/examples/magic_wand/train
+6.	Kaggle.com. 2020. Face Mask Detection. [online] Available at: https://www.kaggle.com/andrewmvd/face-mask-detection/code
 
 ----
 
