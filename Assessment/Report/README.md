@@ -28,14 +28,13 @@ Data sets of mask recognition cases from several GitHub and some pictures of me 
 
 ![image](https://user-images.githubusercontent.com/72681393/109654835-a435c000-7b9d-11eb-96ec-9f1e51f91cda.png)
 
-The model receives grayscale images with a size of 96*96 as input, so it is necessary to preprocess the images of the data set.
-The Edge Impulse platform is convenient for batch processing of images. Before that, the code for image processing in the Colab Notebook is shown below, which can scale and gray scale images in batches.
+The model receives grayscale images with a size of 96*96 as input, so it is necessary to preprocess the images of the data set. The Edge Impulse platform is convenient for batch processing of images. Before that, the code for image processing in the Colab Notebook which can scale and gray scale images in batches.
 
 ![image](https://user-images.githubusercontent.com/72681393/115412134-a70c7300-a226-11eb-94b5-89dff2b8b7b2.png)
+
 ## Model
 Considering that the essence of mask recognition is image binary classification of image recognition. Therefore, the convolutional neural network CNN model, which is commonly used in image recognition was selected in this project. And the cat and dog fight case were taken as a reference.
 The CNN model architecture used is shown below, including two maxpooling layers and two convolution layers, one Flatten layer, and two Dense layer. The last Dense layer outputs the probabilities of whether wearing a mask with Softmax as the activation function.
-
 
 ![image](https://user-images.githubusercontent.com/72681393/115414536-b2f93480-a228-11eb-9a9b-9242f625a731.png)
 
@@ -54,7 +53,6 @@ It can be seen that the accuracy of model training is higher than the validation
 Finally, the training results after adjusting the model parameters are shown in the figure. It can be known from the confusion matrix that the accuracy of the model is about 80%. This is due to the limited memory of Arduino, which inevitably gives up part of the model performance and reduces the model size.
 The online test results of the model are shown in the figure, and the accuracy can be seen…..
 
-
 ## Results and Observations
 The operation of the Arduino terminal is shown in the figure1. The figure2 shows the mask identification output and the identification output without wearing the mask. It can be seen that the program can be successfully identified.
 Behind this result several questions that have been solved one by one:
@@ -62,11 +60,9 @@ Behind this result several questions that have been solved one by one:
  
  ![image](https://user-images.githubusercontent.com/72681393/115588543-73524b80-a301-11eb-8561-96d9f3cabbc0.png)
 
-
 2.Micro_op_resolver.Simply copying the transformed array directly into the Arduino program will not run successfully because the micro_op_resolver required by the model is not loaded.Referred to the model training of Magic_Wand in the official example of TensorFlow and the Arduino program, the corresponding relationship of this part can be found. After correction, it is successfully solved, as shown in the figure.
  
  ![image](https://user-images.githubusercontent.com/72681393/115588573-7b11f000-a301-11eb-87ac-2eace02692d7.png)
-
 
 3.Memory issues. The memory here refers to two parts. The first part is the memory required by the model array, and the second part is the memory required by the model operation. The experimental results show that the model array length is not more than 80W and the model running memory KtensorArenaSize is not more than 180*1024.only If these two conditions are satisfied，it can meet the needs of the normal operation of this project.
 
