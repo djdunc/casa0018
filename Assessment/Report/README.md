@@ -69,7 +69,7 @@ Behind this result several questions that have been solved one by one:
 ## Limittion
 For the future improvement if time permits. This project would try to solve these two limitations. 
 1. Multi-classification problem: the third kind of Unknown data set would add on the basis of the current data set, which mainly includes some images of daily life without people.
-2. Add buttons and buzzer components. Users can take photos and identify them by pressing a button, and a buzzer will remind them to wear a mask.
+2. Adding buttons and buzzer components: Users can take photos and identify them by pressing a button, and a buzzer will remind them to wear a mask.
 
 
 ## Bibliography
