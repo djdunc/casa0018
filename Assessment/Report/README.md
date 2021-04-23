@@ -34,11 +34,11 @@ The model receives grayscale images with a size of 96*96 as input, so it is nece
 
 ## Model
 Considering that the essence of mask recognition is image binary classification of image recognition. Therefore, the convolutional neural network CNN model, which is commonly used in image recognition was selected in this project. And the cat and dog fight case were taken as a reference.
-The CNN model architecture used is shown below, including two maxpooling layers and two convolution layers, one Flatten layer, and two Dense layer. The last Dense layer outputs the probabilities of whether wearing a mask with Softmax as the activation function.
+The CNN model architecture used is shown below, including two maxpooling layers and two convolution layers, one Flatten layer, and two Dense layer. The last Dense layer outputs the probabilities of whether wearing a mask with Softmax as the activation function(chauhan and joshi, 2008).
 
 ![image](https://user-images.githubusercontent.com/72681393/115414536-b2f93480-a228-11eb-9a9b-9242f625a731.png)
 
-ReLU activation function is adopted in the convolutional layer to reduce the amount of calculation. Compared with Sigmoid's exponential calculation, the convolutional layer is much simpler and there is no saturation problem.
+ReLU activation function is adopted in the convolutional layer to reduce the amount of calculation. Compared with Sigmoid's exponential calculation, the convolutional layer is much simpler and there is no saturation problem(Mercioni and holban, 2020).
 
 ![image](https://user-images.githubusercontent.com/72681393/115415735-bc36d100-a229-11eb-822c-de7c9672d2d6.png)
 
@@ -63,6 +63,10 @@ The online test results of the model run on Arduino are shown below. It can be s
 
 ## Results and Observations
 The operation of the Arduino terminal is shown in the figure1. The figure2 shows the mask identification output and the identification output without wearing the mask. It can be seen that the program can be successfully identified.
+
+https://user-images.githubusercontent.com/72681393/115834089-650e4780-a447-11eb-866d-c62caa7b9126.mp4
+
+
 Behind this result several questions that have been solved one by one:
 1.Model dimension. Arduino operation model requires input grayscale image with the size of 96*96, and the input and output data type of the model must be INT8, otherwise the operation fails. For this reason, the author wrote a script as shown in the figure to verify whether the relevant parameters of the quantized model are consistent.
  
@@ -83,8 +87,8 @@ For the future improvement if time permits. This project would try to solve thes
 https://studio.edgeimpulse.com/public/28350/latest
 
 ## Bibliography
-1.	R. Chauhan, K. K. Ghanshala and R. C. Joshi, "Convolutional Neural Network (CNN) for Image Detection and Recognition," 2018 First International Conference on Secure Cyber Computing and Communication (ICSCCC), Jalandhar, India, 2018, pp. 278-282, doi: 10.1109/ICSCCC.2018.8703316.
-2.	M. A. Mercioni and S. Holban, "The Most Used Activation Functions: Classic Versus Current," 2020 International Conference on Development and Application Systems (DAS), 2020, pp. 141-145, doi: 10.1109/DAS49615.2020.9108942.
+1.R. Chauhan, K. K. Ghanshala, R. C. Joshi. 2018.  Convolutional Neural Network (CNN) for Image Detection and Recognition.  First International Conference on Secure Cyber Computing and Communication (ICSCCC), , pp. 278-282.
+2.M. A. Mercioni, S. Holban. 2020. The Most Used Activation Functions: Classic Versus Current. International Conference on Development and Application Systems (DAS),  pp. 141-145.
 3.	GitHub. 2021. X-zhangyang/Real-World-Masked-Face-Dataset. [online] Available at: https://github.com/X-zhangyang/Real-World-Masked-Face-Dataset
 4.	Kaggle.com. 2020. Face Mask Detection. [online] Available at: https://www.kaggle.com/andrewmvd/face-mask-detection/code
 5.	BioID.com. 2003. The BioID Face Database. [online] Available at: https://www.bioid.com/facedb/
