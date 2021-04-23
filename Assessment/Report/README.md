@@ -79,6 +79,8 @@ For the future improvement if time permits. This project would try to solve thes
 1. Multi-classification problem: the third kind of Unknown data set would add on the basis of the current data set, which mainly includes some images of daily life without people.
 2. Adding buttons and buzzer components: Users can take photos and identify them by pressing a button, and a buzzer will remind them to wear a mask.
 
+## edgeimpulse link
+https://studio.edgeimpulse.com/public/28350/latest
 
 ## Bibliography
 1.	R. Chauhan, K. K. Ghanshala and R. C. Joshi, "Convolutional Neural Network (CNN) for Image Detection and Recognition," 2018 First International Conference on Secure Cyber Computing and Communication (ICSCCC), Jalandhar, India, 2018, pp. 278-282, doi: 10.1109/ICSCCC.2018.8703316.
