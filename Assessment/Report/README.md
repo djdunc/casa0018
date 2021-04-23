@@ -22,7 +22,7 @@ Arduino can recognize whether people are wearing masks in real time according to
 
 
 ## Data
-Data sets of mask recognition cases from several GitHub and some pictures of me and my family have been used to get the pictures of wearing masks and no masks. In general, a total of more than 2000 masks have been collected, including more than 1000 masks worn and unworn respectively. The original data sets have been cleaned, classified, and stored in two categories respectively, and the pictures have been renamed with serial numbers. The dataset used is shown below.
+The data set is mainly derived from the mask recognition data set of Wuhan University, the mask recognition competition data set of Kaggle and the face data set of BioID. In general, a total of more than 4000 masks have been collected, including more than 2000 masks worn and unworn respectively. The original data sets have been cleaned, classified, and stored in two categories respectively, and the pictures have been renamed with serial numbers. The dataset used is shown below.
 
 ![image](https://user-images.githubusercontent.com/72681393/109654824-9da74880-7b9d-11eb-978e-268413a3e475.png)
 
@@ -45,13 +45,21 @@ ReLU activation function is adopted in the convolutional layer to reduce the amo
 SoftMax is adopted as the activation function of the last layer, the Dense layer. Sigmoid is an exponential function whose output is between 0 and 1, and it is suitable for using in binary classification problems and represents the output result with probability. More importantly, SoftMax is not only applicable to binary classification problems, but also to multiple classification problems. It can output all kinds of probabilities respectively, which is convenient for subsequent expansion of classification.
 
 ## Experiments
-The selection of model architecture is mainly based on two cases: cat fighting and dog fighting and Magic_Wand.The model architecture and operation results of Edge Impulse platform are shown below. The learning rate and the number of training rounds are set as 0.0005 and 35 respectively. The grayscale images of 96*96 size are used as input to output the probability of wearing masks and not wearing masks respectively.
+The selection of model architecture is mainly based on two cases: cat fighting and dog fighting and Magic_Wand.The model architecture and operation results of Edge Impulse platform are shown below. The learning rate and the number of training rounds are set as 0.0005 and 20 respectively. The grayscale images of 96*96 size are used as input to output the probability of wearing masks and not wearing masks respectively.
 
-![image](https://user-images.githubusercontent.com/72681393/115416878-b988ab80-a22a-11eb-9c94-104ae3f34e7c.png)
+![image](https://user-images.githubusercontent.com/72681393/115827446-de556c80-a43e-11eb-9e42-a9c0e567a0c9.png)
 
 It can be seen that the accuracy of model training is higher than the validation rate, so the author added the Dropout layer in the subsequent improvement to reduce the possibility of model overfitting to a certain extent.
-Finally, the training results after adjusting the model parameters are shown in the figure. It can be known from the confusion matrix that the accuracy of the model is about 80%. This is due to the limited memory of Arduino, which inevitably gives up part of the model performance and reduces the model size.
-The online test results of the model are shown in the figure, and the accuracy can be seen…..
+
+
+Finally, the training results after adjusting the model parameters are shown in the figure. It can be known from the confusion matrix that the accuracy of the model is about 89%. This is due to the limited memory of Arduino, which inevitably gives up part of the model performance and reduces the model size.
+
+![image](https://user-images.githubusercontent.com/72681393/115827944-97b44200-a43f-11eb-8a19-e921ba853e7b.png)
+
+
+The online test results of the model run on Arduino are shown below. It can be seen that the accuracy rate is 86%, and some pictures are misjudged or uncertain because the features of the picture are not obvious.
+
+![image](https://user-images.githubusercontent.com/72681393/115828337-27f28700-a440-11eb-9f0d-11553c287464.png)
 
 ## Results and Observations
 The operation of the Arduino terminal is shown in the figure1. The figure2 shows the mask identification output and the identification output without wearing the mask. It can be seen that the program can be successfully identified.
@@ -73,17 +81,13 @@ For the future improvement if time permits. This project would try to solve thes
 
 
 ## Bibliography
-*If you added any references then add them in here using this format:*
+1.	R. Chauhan, K. K. Ghanshala and R. C. Joshi, "Convolutional Neural Network (CNN) for Image Detection and Recognition," 2018 First International Conference on Secure Cyber Computing and Communication (ICSCCC), Jalandhar, India, 2018, pp. 278-282, doi: 10.1109/ICSCCC.2018.8703316.
+2.	M. A. Mercioni and S. Holban, "The Most Used Activation Functions: Classic Versus Current," 2020 International Conference on Development and Application Systems (DAS), 2020, pp. 141-145, doi: 10.1109/DAS49615.2020.9108942.
+3.	GitHub. 2021. X-zhangyang/Real-World-Masked-Face-Dataset. [online] Available at: https://github.com/X-zhangyang/Real-World-Masked-Face-Dataset
+4.	Kaggle.com. 2020. Face Mask Detection. [online] Available at: https://www.kaggle.com/andrewmvd/face-mask-detection/code
+5.	BioID.com. 2003. The BioID Face Database. [online] Available at: https://www.bioid.com/facedb/
+6.	GitHub. 2021. tensorflow/tensorflow/lite/micro/examples/magic_wand/train. [online] Available at: https://github.com/tensorflow/tensorflow/tree/master/tensorflow/lite/micro/examples/magic_wand/train
 
-1. Last name, First initial. (Year published). Title. Edition. (Only include the edition if it is not the first edition) City published: Publisher, Page(s). http://google.com
-
-2. Last name, First initial. (Year published). Title. Edition. (Only include the edition if it is not the first edition) City published: Publisher, Page(s). http://google.com
-
-4.	GitHub. 2021. X-zhangyang/Real-World-Masked-Face-Dataset. [online] Available at: https://github.com/X-zhangyang/Real-World-Masked-Face-Dataset
-5.	GitHub. 2021. tensorflow/tensorflow/lite/micro/examples/magic_wand/train. [online] Available at: https://github.com/tensorflow/tensorflow/tree/master/tensorflow/lite/micro/examples/magic_wand/train
-6.	Kaggle.com. 2020. Face Mask Detection. [online] Available at: https://www.kaggle.com/andrewmvd/face-mask-detection/code
-
-----
 
 ## Declaration of Authorship
 
