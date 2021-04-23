@@ -13,7 +13,7 @@ The overall structure of the project is shown below. The Saved Model is taken as
 
 ![image](https://user-images.githubusercontent.com/72681393/115410196-036e9300-a225-11eb-913a-ed01c347db38.png)
 
-The model training was carried out on the Google platform and Edge Impulse platform. The required data sets were collected according to the analysis of the project objectives, and the appropriate neural network architecture was selected for model training and model transformation.The model is implemented at the Arduino end. The Arducam module is responsible for sensing the outside world and sending images to the Arduino Nano 33 BLE Sense as the model input. The input data is recognized in real time and the output results are obtained.The Arduino program frame is shown below.
+The model training was carried out on the Google Colab and Edge Impulse. The required data sets were collected according to the analysis of the project objectives, and the appropriate neural network architecture was selected for model training and model transformation.The model is implemented at the Arduino end. The Arducam module is responsible for sensing the outside world and sending images to the Arduino Nano 33 BLE Sense as the model input. The input data is recognized in real time and the output results are obtained.The Arduino program frame is shown below.
 
 ![image](https://user-images.githubusercontent.com/72681393/115411200-db336400-a225-11eb-8325-4f346ade0284.png)
 
