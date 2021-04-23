@@ -3,7 +3,7 @@
 ChenYifan
 
 ## Introduction
-As the COVID-19 epidemic gets worse, more and more people are aware of the importance of wearing masks outside. While existing vaccines, go out with mask is still necessary, but not all the people wear masks, therefore the aim of this project is to realize mask wearing recognition on Arduino Nano 33 BLE. The project goal is on the Arduino platform achieved the identification of whether wearing masks and make a mask recognition machine and be able to use it anytime and anywhere by cameras. This project first wrote code in Colab Notebook for model training, and then adopted Edge Impulse platform for model training. 
+As the COVID-19 epidemic gets worse, more and more people are aware of the importance of wearing masks outside. While existing vaccines, go out with mask is still necessary, but not all the people wear masks, therefore the aim of this project is to realize mask wearing recognition on Arduino Nano 33 BLE. The project goal is on the Arduino platform achieved the identification of whether wearing masks and make a mask recognition machine and be able to use it anytime and anywhere by cameras. This project first wrote code in Google Colab for model training, and then adopted Edge Impulse platform for model training. 
 
 ## Research Question
 How to build and train a Convolutional Neural Network (CNN) image recognition classification model to realize mask recognition based on Arduino 33 BLE platform and Arducam.
@@ -13,7 +13,7 @@ The overall structure of the project is shown below. The Saved Model is taken as
 
 ![image](https://user-images.githubusercontent.com/72681393/115410196-036e9300-a225-11eb-913a-ed01c347db38.png)
 
-The model training was carried out on the Google Colab and Edge Impulse. The required data sets were collected according to the analysis of the project objectives, and the appropriate neural network architecture was selected for model training and model transformation.The model is implemented at the Arduino end. The Arducam module is responsible for sensing the outside world and sending images to the Arduino Nano 33 BLE Sense as the model input. The input data is recognized in real time and the output results are obtained.The Arduino program frame is shown below.
+The model training was carried out on Edge Impulse. The required data sets were collected according to the analysis of the project objectives, and the appropriate neural network architecture was selected for model training and model transformation.The model is implemented at the Arduino end. The Arducam module is responsible for sensing the outside world and sending images to the Arduino Nano 33 BLE Sense as the model input. The input data is recognized in real time and the output results are obtained.The Arduino program frame is shown below.
 
 ![image](https://user-images.githubusercontent.com/72681393/115411200-db336400-a225-11eb-8325-4f346ade0284.png)
 
