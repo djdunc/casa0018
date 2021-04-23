@@ -62,7 +62,7 @@ The online test results of the model run on Arduino are shown below. It can be s
 ![image](https://user-images.githubusercontent.com/72681393/115828337-27f28700-a440-11eb-9f0d-11553c287464.png)
 
 ## Results and Observations
-The operation of the Arduino terminal is shown in the figure1. The figure2 shows the mask identification output and the identification output without wearing the mask. It can be seen that the program can be successfully identified.
+The operation of the Arduino terminal is shown in video. The video shows the mask identification output and the identification output without wearing the mask. It can be seen that the program can be successfully identified.
 
 https://user-images.githubusercontent.com/72681393/115834089-650e4780-a447-11eb-866d-c62caa7b9126.mp4
 
