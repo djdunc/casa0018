@@ -1,1 +1,1 @@
-脚本Convert.ipynb用于转换从Edge Impulse下载的int8 quantize的模型文件为Arduino可以接受的数组文件Model.cc，使用时需要在Google云盘使用，默认文件路径为云盘挂载目录。
+The script Convert.ipynb is used to Convert the INT8 quantize Model files downloaded from Edge Impulse into Arduino acceptable array file model.cc
