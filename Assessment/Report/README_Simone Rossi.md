@@ -56,7 +56,7 @@ More experiments were carried out to reduce overfitting and improve performance.
 
 ![image](https://user-images.githubusercontent.com/43931397/116390306-ce120880-a815-11eb-8080-bd297be6c61c.png)
 
-*Output of the Neural Network model with more dropout layers and run on 602 database*
+*Output of the Neural Network model with more dropout layers and run on 602 files*
 
 The final model was based on Transfer Learning model with 50 epochs, 0.002 learning rate, data augmentation and 0.75 confidence rating. Its accuracy was 37.5% and its loss 6.93, which were among the best achieved during experimentation. The model was deployed on an iPhone 7 Plus; the camera was aimed at two real life dogs as well as at some pictures of dogs from the databased used during training; none of the images were associated to the correct label.
 
