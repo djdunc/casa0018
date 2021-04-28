@@ -41,3 +41,6 @@ Creating job... OK (ID: 775592) Copying features from processing blocks... Copyi
 
 ![image](https://user-images.githubusercontent.com/43931397/116433189-2b6f7f00-a841-11eb-963c-4f7f8be71ea5.png)
 
+The last version of the model is publicly available at 
+
+https://studio.edgeimpulse.com/public/24937/latest
