@@ -76,7 +76,7 @@ Looking at the results from validation, it seems that more accurate results were
 
 ![image](https://user-images.githubusercontent.com/43931397/116387328-9eadcc80-a812-11eb-9aec-5f843ced0fad.png)
 ![image](https://user-images.githubusercontent.com/43931397/116387677-f0565700-a812-11eb-8bea-9dc8fa73d1ee.png)
-![image](https://user-images.githubusercontent.com/43931397/116387734-006e3680-a813-11eb-9723-f450eb5b3643.png)
+![image](https://user-images.githubusercontent.com/43931397/116391697-665cbd00-a817-11eb-9c06-4f5a60255671.png)
 
 *Model testing results,for dogs which face was successfully recognised*
 
