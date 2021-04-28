@@ -104,10 +104,10 @@ https://github.com/SimoneUCL/casa0018/tree/main/Assessment/Projects/Final%20Proj
 
 ## External data
 
-A public version of the latest version of the project is available at the following link
+A public version of the latest version of the project is available at the following link:
 https://studio.edgeimpulse.com/public/28887/latest
 
-This folder on the Github repository contains some of the data exported during the experiments.
+This folder on the Github repository contains some of the data exported during the experiments:
 https://github.com/SimoneUCL/casa0018/tree/main/Assessment/Projects/Final%20Project
 
 ## Bibliography
