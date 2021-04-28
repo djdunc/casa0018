@@ -41,11 +41,11 @@ The initial image acquisition entailed 315 images from DogFaceNet repository pre
 
 Experiments with both Neural Network and Transfer Learning were undertaken with 100 epochs, 0.01 learning rate and 0.75 a minimum confidence rate; models overfitted with first signs appearing within the first two dozen epochs. The NN model gave no accuracy and 4.43 loss, while the TL one had 26.5% accuracy and 9.58 loss.
 
-![image](https://user-images.githubusercontent.com/43931397/116382175-8be4c900-a80d-11eb-8812-086b92231ffb.png) 
+![image](https://user-images.githubusercontent.com/43931397/116387871-2a275d80-a813-11eb-9814-9906700a9842.png)
 
 *Output of the initial model based on Neural Network* 
 
-![image](https://user-images.githubusercontent.com/43931397/116382354-b9ca0d80-a80d-11eb-98a8-aaba1f7bf02b.png) 
+![image](https://user-images.githubusercontent.com/43931397/116387894-30b5d500-a813-11eb-8651-7d88eff06029.png)
 
 *Output of the initial model based on Transfer Learning*
 
