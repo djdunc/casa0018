@@ -7,6 +7,7 @@ Simone Rossi
 Reported dog thefts have increased over the last few years with only 17% of animals re-united with their families (Direct Line Group, 2019); situation has got worse since the beginning of the pandemic due a growth in demand for pets (Al Jazeera, 2021). Considering the rate at which dogs are found, the strategy of flier posting and of appeals on social media adopted by dog owners is ineffective. 
 
 ![image](https://user-images.githubusercontent.com/43931397/116381616-fb0ded80-a80c-11eb-8a34-9682e7a2c3be.png)
+*Reported dog thefts in Endgland, Wales and Northern Ireland - source BBC News*
 
 This project aims at using deep learning to identify dog faces from their pictures to help increasing the rate of found dogs. While there have been considerable advancements on the use of machine learning to recognise human faces, most projects aimed at the fauna have been focused on breed identification and on counting animals; nonetheless some studies on how to use machine learning for pet face recognition were published over the last five years. Inspiration for the proposed tool was taken from similar projects based on convolutional neural networks developed in 2016 (Moreira et al, 2016) and in 2019 (Mougeout et al, 2019), with more attention paid to the latter, which showed better accuracy. A project of the same scale as these two would be out of the scope of this module, therefore the aim is using Edge Impulse to create a simplified version of Mougeot’s tool.
 
@@ -39,7 +40,7 @@ The initial image acquisition entailed 315 images from DogFaceNet repository pre
 
 Experiments with both Neural Network and Transfer Learning were undertaken with 100 epochs, 0.01 learning rate and 0.75 a minimum confidence rate; models overfitted with first signs appearing within the first two dozen epochs. The NN model gave no accuracy and 4.43 loss, while the TL one had 26.5% accuracy and 9.58 loss.
 
-![image](https://user-images.githubusercontent.com/43931397/116382175-8be4c900-a80d-11eb-8812-086b92231ffb.png) ![image](https://user-images.githubusercontent.com/43931397/116382354-b9ca0d80-a80d-11eb-98a8-aaba1f7bf02b.png)
+![image](https://user-images.githubusercontent.com/43931397/116382175-8be4c900-a80d-11eb-8812-086b92231ffb.png) *Output of the initial model based on Neural Network* ![image](https://user-images.githubusercontent.com/43931397/116382354-b9ca0d80-a80d-11eb-98a8-aaba1f7bf02b.png) *Output of the initial model based on Transfer Learning*
 
 More experiments were carried out to reduce overfitting and improve performance. The sample was gradually increased up to a total of 602 pictures, the learning rate was progressively reduced to 0.0002; dropout layers were also added to the NN model to minimise overfitting. There were improvements from the point of view of validation accuracy and loss, nonetheless the models kept overfitting it took longer for overfitting to appear and the gap between testing and validation was smaller. Epochs were reduced to 50 as after this point accuracy and loss plateaued; this was also required to prevent the model from exiting the loop before producing results.
 
@@ -51,7 +52,7 @@ Considering the complexity of face recognition and of the models developed by ot
 
 Moreover, the resolution of Edge Impulse GUI seems unfit for a model entailing tens of labels (one per each dog); the confusion matrix and the classification results on device are extremely difficult to read and understand.
 
-![image](https://user-images.githubusercontent.com/43931397/116385494-bf752280-a810-11eb-9b7d-3f28fbe387c1.png)
+![image](https://user-images.githubusercontent.com/43931397/116385494-bf752280-a810-11eb-9b7d-3f28fbe387c1.png) *Model testing results,for dogs which face was successfully recognised*
 
 Attempts at introducing purpose-built blocks based on the Resnet model developed by Mougeot’s team (2019) were made to improve image pre-processing and to get better overall results; such attempts failed as the machine’s firewall seemed to prevent the completion of part of the tasks recommended by Edge Impulse. However, a model heavily relying on imported blocks would reduce the peculiarity of relying on Edge Impulse to build a simplified face recognition model. 
 
