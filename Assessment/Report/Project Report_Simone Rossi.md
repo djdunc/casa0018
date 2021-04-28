@@ -61,12 +61,15 @@ More experiments were carried out to reduce overfitting and improve performance.
 The final model was based on Transfer Learning model with 50 epochs, 0.002 learning rate, data augmentation and 0.75 confidence rating. Its accuracy was 45.8% and its loss 8.70, which were among the best achieved during experimentation. The model was deployed on an iPhone 7 Plus; the camera was aimed at two real life dogs as well as at some pictures of dogs from the databased used during training; none of the images were associated to the correct label.
 
 ![image](https://user-images.githubusercontent.com/43931397/116407898-23581500-a82a-11eb-9be3-181c9de63397.png)
+
 *Training performance of the most recent experiment with TL*
 
 ![image](https://user-images.githubusercontent.com/43931397/116408067-4f739600-a82a-11eb-85c3-14176fdc86e9.png)
+
 *On device performance of the most recent experiment with TL*
 
 ![image](https://user-images.githubusercontent.com/43931397/116408535-d1fc5580-a82a-11eb-9e16-75d210a59730.png)
+
 *Validation accuracy and confusion martrix of the most recent experiment with TL*
 
 ## Results and Observations
