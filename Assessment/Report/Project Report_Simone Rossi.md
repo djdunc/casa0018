@@ -58,8 +58,16 @@ More experiments were carried out to reduce overfitting and improve performance.
 
 *Output of the Neural Network model with more dropout layers and run on 602 files*
 
-The final model was based on Transfer Learning model with 50 epochs, 0.002 learning rate, data augmentation and 0.75 confidence rating. Its accuracy was 37.5% and its loss 6.93, which were among the best achieved during experimentation. The model was deployed on an iPhone 7 Plus; the camera was aimed at two real life dogs as well as at some pictures of dogs from the databased used during training; none of the images were associated to the correct label.
+The final model was based on Transfer Learning model with 50 epochs, 0.002 learning rate, data augmentation and 0.75 confidence rating. Its accuracy was 45.8% and its loss 8.70, which were among the best achieved during experimentation. The model was deployed on an iPhone 7 Plus; the camera was aimed at two real life dogs as well as at some pictures of dogs from the databased used during training; none of the images were associated to the correct label.
 
+![image](https://user-images.githubusercontent.com/43931397/116407898-23581500-a82a-11eb-9be3-181c9de63397.png)
+*Training performance of the most recent experiment with TL*
+
+![image](https://user-images.githubusercontent.com/43931397/116408067-4f739600-a82a-11eb-85c3-14176fdc86e9.png)
+*On device performance of the most recent experiment with TL*
+
+![image](https://user-images.githubusercontent.com/43931397/116408535-d1fc5580-a82a-11eb-9e16-75d210a59730.png)
+*Validation accuracy and confusion martrix of the most recent experiment with TL*
 
 ## Results and Observations
 Considering the complexity of face recognition and of the models developed by others (Mougeot et al, 2019; Moreira et al, 2016), Edge Impulse does not seem the most appropriate platform for a dog finding tool. While the Transfer Learning block doesn’t allow much flexibility in terms of model architecture, the Neural Network block enables the addition and removal of layers as well as changes to the quantity of neurons and of layers; nonetheless NN is indicated movement and audio recognition as the poor results from its application to face recognition seems to confirm. Besides, the more layers and neurons the model has the more it overfits as seen during experiments.
