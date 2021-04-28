@@ -72,6 +72,10 @@ The final model was based on Transfer Learning model with 50 epochs, 0.002 learn
 
 *Validation accuracy and confusion martrix of the most recent experiment with TL*
 
+Images and results from classifications are stored at the following link:
+
+https://github.com/SimoneUCL/casa0018/tree/main/Assessment/Projects/Final%20Project/Dog%20Face%20Classification
+
 ## Results and Observations
 Considering the complexity of face recognition and of the models developed by others (Mougeot et al, 2019; Moreira et al, 2016), Edge Impulse does not seem the most appropriate platform for a dog finding tool. While the Transfer Learning block doesn’t allow much flexibility in terms of model architecture, the Neural Network block enables the addition and removal of layers as well as changes to the quantity of neurons and of layers; nonetheless NN is indicated movement and audio recognition as the poor results from its application to face recognition seems to confirm. Besides, the more layers and neurons the model has the more it overfits as seen during experiments.
 
