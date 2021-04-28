@@ -30,6 +30,9 @@ Images were initially acquired from PetFinder.my and from Guillaume Mougeot’s 
 Face identification relies on biometric data of dogs, i.e. eyes and muzzle (Mougeot et, 2019) hence images where these facial features were not easily identifiable because of the presence of objects in front of the pet were discarded. This is likely to exclude dogs from breeds which features include long facial air; nonetheless this could be an acceptable compromise for a first step into building a reliable face recognition tool which may be refined and improved to ensure all breeds are incorporated at a later stage. 
 To improve the accuracy of the model in detecting the main biometric data, images have to be cropped and rotated to keep the three key features within the same sections of the pictures across the dataset. This activity was initially recommended by Kumar and Singh (2018) and later adopted by Mougeot (2019) with satisfactory results. Since pre-processing should be carried out by hand on a large quantity of images, those from the Github repository were used for training and testing with the added value that this database also contains several images of the same dog unlike others, which should facilitate the learning process.
 
+Data is stored in this folder under the Github repository
+https://github.com/SimoneUCL/casa0018/tree/main/Assessment/Projects/Final%20Project/Database
+
 ## Model
 The proposed architecture is based on convolutional neural networks as developed by He et al (2016) and as improved by Mougeot et al (2019) with the addition of dropout layers. The challenge of this project consists in simplifying the model while keeping accuracy as high as possible. 
 Solutions based on Neural Network and Transfer Learning blocks in Edge Impulse were considered when developing the model. Although the platform recommends the use of Neural Network for categorizing movement or recognizing audio, this block seemed the preferred as its GUI allows more flexibility in terms of the number of layers and neurons and it offer the possibility of adding as many dropout layers as necessary to minimise overfitting. After a few attempts when the model overfitted and produced unsatisfactory results from the point of view of accuracy and loss, the focus was shifted on the Transfer Learning block with v2 0.35 appearing to be the one with the most acceptable results. The architecture of this model is much simpler than the target model (Mougeout et al, 2019) which contains model contains 92 layers for a total of 5.8 million of parameters, on the other hand the model was overfitting for which it is generally advised to remove layers and reduce the number of neurons.
@@ -50,6 +53,10 @@ Experiments with both Neural Network and Transfer Learning were undertaken with 
 *Output of the initial model based on Transfer Learning*
 
 More experiments were carried out to reduce overfitting and improve performance. The sample was gradually increased up to a total of 602 pictures, the learning rate was progressively reduced to 0.0002; dropout layers were also added to the NN model to minimise overfitting. There were improvements from the point of view of validation accuracy and loss, nonetheless the models kept overfitting it took longer for overfitting to appear and the gap between testing and validation was smaller. Epochs were reduced to 50 as after this point accuracy and loss plateaued; this was also required to prevent the model from exiting the loop before producing results.
+
+![image](https://user-images.githubusercontent.com/43931397/116390306-ce120880-a815-11eb-8080-bd297be6c61c.png)
+
+*Output of the Neural Network model with more dropout layers and run on 602 database*
 
 The final model was based on Transfer Learning model with 50 epochs, 0.002 learning rate, data augmentation and 0.75 confidence rating. Its accuracy was 37.5% and its loss 6.93, which were among the best achieved during experimentation. The model was deployed on an iPhone 7 Plus; the camera was aimed at two real life dogs as well as at some pictures of dogs from the databased used during training; none of the images were associated to the correct label.
 
