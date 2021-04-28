@@ -51,14 +51,22 @@ Considering the complexity of face recognition and of the models developed by ot
 
 Moreover, the resolution of Edge Impulse GUI seems unfit for a model entailing tens of labels (one per each dog); the confusion matrix and the classification results on device are extremely difficult to read and understand.
 
+![image](https://user-images.githubusercontent.com/43931397/116385494-bf752280-a810-11eb-9b7d-3f28fbe387c1.png)
+
 Attempts at introducing purpose-built blocks based on the Resnet model developed by Mougeot’s team (2019) were made to improve image pre-processing and to get better overall results; such attempts failed as the machine’s firewall seemed to prevent the completion of part of the tasks recommended by Edge Impulse. However, a model heavily relying on imported blocks would reduce the peculiarity of relying on Edge Impulse to build a simplified face recognition model. 
 
-Looking at the results from validation, it seems that more accurate results were achieved with images portraying puppies or dogs with features generally associated to puppy (see table below): little facial hair and large eyes compared to the size of the head. Contrast between the eye and their background colour seems to bear an impact. Better pre-processing than allowed by Edge Impulse might increase the ability of the model to identify the three biometric markers necessary to face recognition. 
+Looking at the results from validation, it seems that more accurate results were achieved with images portraying puppies or dogs with features generally associated to puppy (see table below): little facial hair and large eyes compared to the size of the head. Contrast between the eye and their background colour seems to bear an impact. 
+
+![image](https://user-images.githubusercontent.com/43931397/116385001-4b3a7f00-a810-11eb-9afc-09a05ff58060.png)
+
+Better pre-processing than allowed by Edge Impulse might increase the ability of the model to identify the three biometric markers necessary to face recognition. 
+
+## External data
 
 A public version of the latest version of the project is available at the following link
 https://studio.edgeimpulse.com/public/28887/latest
-The folder on the Github repository contains some of the data exported during the experiments.
 
+This folder on the Github repository contains some of the data exported during the experiments.
 https://github.com/SimoneUCL/casa0018/tree/main/Assessment/Projects/Final%20Project
 
 ## Bibliography
