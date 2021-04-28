@@ -78,6 +78,7 @@ https://github.com/SimoneUCL/casa0018/tree/main/Assessment/Projects/Final%20Proj
 
 ## Results and Observations
 Considering the complexity of face recognition models (Mougeot et al, 2019; Moreira et al, 2016), Edge Impulse seems inappropriate unless custom blocks are heavily introduced. Transfer Learning doesn’t allow much flexibility in terms of model architecture, Neural Network enables the addition and removal of layers as well as changes to the quantity of neurons and of layers; nonetheless the latter is best suited for movement and audio recognition as the poor results from its application to face recognition seems to confirm.
+
 The resolution of the GUI seems unsuitable for a model with tens of labels: the confusion matrix and the classification results on device are extremely difficult to read and understand.
 
 ![image](https://user-images.githubusercontent.com/43931397/116387422-b5542380-a812-11eb-96d3-d89fa8d682cf.png)
