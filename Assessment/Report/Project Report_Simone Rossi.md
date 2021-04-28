@@ -103,11 +103,17 @@ https://github.com/SimoneUCL/casa0018/tree/main/Assessment/Projects/Final%20Proj
 
 ## Bibliography
 Dog theft on the increase: five pups stolen every day.(2019). Direct Line Group. viewed 7 March 2021. https://www.directlinegroup.co.uk/en/news/brand-news/2019/090519.html 
+
 He, K. Zhang, X. Ren, S. Sun, J. (2016). Deep Residual Learning for Image Recognition. in 2016 IEEE Conference on Computer Vision and Pattern Recognition (CVPR). Las Vegas: IEEE, pp. 770–778. doi: 10.1109/CVPR.2016.90.
+
 Kumar, S. Singh, S. K. (2018).  Monitoring of pet animal in smart cities using animal biometrics. Future Generation Computer Systems 83. pp553–563. doi: 10.1016/j.future.2016.12.006.
-Moreira, T. P. Lisboa Perez, M. de Oliveira Werneck, R. Valle, E. (2016). Where Is My Puppy? Retrieving Lost Dogs by Facial Features. Available at: http://arxiv.org/abs/1510.02781 
+
+Moreira, T. P. Lisboa Perez, M. de Oliveira Werneck, R. Valle, E. (2016). Where Is My Puppy? Retrieving Lost Dogs by Facial Features. Available at: http://arxiv.org/abs/1510.02781
+
 Mougeot, G. Li, D. Jia, S. (2019). A Deep Learning Approach for Dog Face Verification and Recognition’. in Nayak, A. C. Sharma, A. (eds). PRICAI 2019: Trends in Artificial Intelligence. Cham: Springer International Publishing (Lecture Notes in Computer Science). pp418–430. doi: 10.1007/978-3-030-29894-4_34.
+
 UK dog theft on the rise amid pandemic pet demand. (2021). Al Jazeera. viewed 7 March 2021.viewed 7 March 2021. https://www.aljazeera.com/news/2021/2/5/uk-dog-theft-on-the-rise-amid-pandemic-pet-demand
+
 Trigueros, D. S. Meng, L. Hartnett, M. (2018). Face Recognition: From Traditional to Deep Learning Methods., arXiv:1811.00116 [cs]. Available at: http://arxiv.org/abs/1811.00116 
 
 ## Declaration of Authorship
