@@ -59,15 +59,19 @@ Considering the complexity of face recognition and of the models developed by ot
 
 Moreover, the resolution of Edge Impulse GUI seems unfit for a model entailing tens of labels (one per each dog); the confusion matrix and the classification results on device are extremely difficult to read and understand.
 
-![image](https://user-images.githubusercontent.com/43931397/116385494-bf752280-a810-11eb-9b7d-3f28fbe387c1.png) 
+![image](https://user-images.githubusercontent.com/43931397/116387422-b5542380-a812-11eb-96d3-d89fa8d682cf.png)
 
-*Model testing results,for dogs which face was successfully recognised*
+*Typical Confusion Matrix*
 
 Attempts at introducing purpose-built blocks based on the Resnet model developed by Mougeot’s team (2019) were made to improve image pre-processing and to get better overall results; such attempts failed as the machine’s firewall seemed to prevent the completion of part of the tasks recommended by Edge Impulse. However, a model heavily relying on imported blocks would reduce the peculiarity of relying on Edge Impulse to build a simplified face recognition model. 
 
 Looking at the results from validation, it seems that more accurate results were achieved with images portraying puppies or dogs with features generally associated to puppy (see table below): little facial hair and large eyes compared to the size of the head. Contrast between the eye and their background colour seems to bear an impact. 
 
-![image](https://user-images.githubusercontent.com/43931397/116385001-4b3a7f00-a810-11eb-9afc-09a05ff58060.png)
+![image](https://user-images.githubusercontent.com/43931397/116387328-9eadcc80-a812-11eb-9aec-5f843ced0fad.png)
+![image](https://user-images.githubusercontent.com/43931397/116387677-f0565700-a812-11eb-8bea-9dc8fa73d1ee.png)
+![image](https://user-images.githubusercontent.com/43931397/116387734-006e3680-a813-11eb-9723-f450eb5b3643.png)
+
+*Model testing results,for dogs which face was successfully recognised*
 
 Better pre-processing than allowed by Edge Impulse might increase the ability of the model to identify the three biometric markers necessary to face recognition. 
 
