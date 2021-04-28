@@ -121,4 +121,5 @@ Trigueros, D. S. Meng, L. Hartnett, M. (2018). Face Recognition: From Traditiona
 I, Simone Rossi, confirm that the work presented in this assessment is my own. Where information has been derived from other sources, I confirm that this has been indicated in the work.
 
 *Simone Rossi*
+
 London, 29th April 2021
