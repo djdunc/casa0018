@@ -77,17 +77,16 @@ Images and results from classifications are stored at the following link:
 https://github.com/SimoneUCL/casa0018/tree/main/Assessment/Projects/Final%20Project/Dog%20Face%20Classification
 
 ## Results and Observations
-Considering the complexity of face recognition and of the models developed by others (Mougeot et al, 2019; Moreira et al, 2016), Edge Impulse does not seem the most appropriate platform for a dog finding tool. While the Transfer Learning block doesn’t allow much flexibility in terms of model architecture, the Neural Network block enables the addition and removal of layers as well as changes to the quantity of neurons and of layers; nonetheless NN is indicated movement and audio recognition as the poor results from its application to face recognition seems to confirm. Besides, the more layers and neurons the model has the more it overfits as seen during experiments.
-
-Moreover, the resolution of Edge Impulse GUI seems unfit for a model entailing tens of labels (one per each dog); the confusion matrix and the classification results on device are extremely difficult to read and understand.
+Considering the complexity of face recognition models (Mougeot et al, 2019; Moreira et al, 2016), Edge Impulse seems inappropriate unless custom blocks are heavily introduced. Transfer Learning doesn’t allow much flexibility in terms of model architecture, Neural Network enables the addition and removal of layers as well as changes to the quantity of neurons and of layers; nonetheless the latter is best suited for movement and audio recognition as the poor results from its application to face recognition seems to confirm.
+The resolution of the GUI seems unsuitable for a model with tens of labels: the confusion matrix and the classification results on device are extremely difficult to read and understand.
 
 ![image](https://user-images.githubusercontent.com/43931397/116387422-b5542380-a812-11eb-96d3-d89fa8d682cf.png)
 
 *Typical Confusion Matrix*
 
-Attempts at introducing purpose-built blocks based on the Resnet model developed by Mougeot’s team (2019) were made to improve image pre-processing and to get better overall results; such attempts failed as the machine’s firewall seemed to prevent the completion of part of the tasks recommended by Edge Impulse. However, a model heavily relying on imported blocks would reduce the peculiarity of relying on Edge Impulse to build a simplified face recognition model. 
+Attempts at introducing custom blocks were made to improve image pre-processing and to get better overall results, but they failed as the machine’s firewall prevented the completion of part of the required steps. When more layers were added to match the architecture of Mougeot’s tool, training stopped before producing results. However, a model heavily relying on imported blocks would reduce the peculiarity of Edge Impulse as a simpler platform and the purpose of building a simple tool.
 
-Looking at the results from validation, it seems that more accurate results were achieved with images portraying puppies or dogs with features generally associated to puppy (see table below): little facial hair and large eyes compared to the size of the head. Contrast between the eye and their background colour seems to bear an impact. 
+Apparently, more accurate validation results were achieved with images portraying puppies or dogs with features generally associated to puppy (see table below): little facial hair and large eyes compared to the size of the head. Contrast between the eye and their background colour seems to bear an impact too. Classification entailed running the model more than once for each subject; results were not consistent since some dog was recognised all times, some other was recognised with low confidence level or just two out of four times and some other was not recognised at all.
 
 ![image](https://user-images.githubusercontent.com/43931397/116387328-9eadcc80-a812-11eb-9aec-5f843ced0fad.png)
 ![image](https://user-images.githubusercontent.com/43931397/116387677-f0565700-a812-11eb-8bea-9dc8fa73d1ee.png)
@@ -95,7 +94,13 @@ Looking at the results from validation, it seems that more accurate results were
 
 *Model testing results,for dogs which face was successfully recognised*
 
-Better pre-processing than allowed by Edge Impulse might increase the ability of the model to identify the three biometric markers necessary to face recognition. 
+Next steps may include adding bespoke blocks to automate and improve pre-processing; as to training, better understanding of Edge Impulse might help turning TL into a more flexible and effective block.
+
+A public version of the latest version of the project is available at the following link:
+https://studio.edgeimpulse.com/public/28887/latest
+
+The folder on the Github repository contains some of the data exported during the experiments:
+https://github.com/SimoneUCL/casa0018/tree/main/Assessment/Projects/Final%20Project
 
 ## External data
 
