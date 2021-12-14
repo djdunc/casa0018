@@ -1,5 +1,8 @@
 # CASA0018: Deep Learning for Sensor Networks
-CASA0018 Deep Learning for Sensor Networks course material
+
+This repository contains the lab materials for Connected Environments DL4Sn module. The code folders are divided into the weekly activities. A summary overview of the course is below with a more detailed overview on the UCL Moodle site for CASA0018.
+
+> We suggest that students take a fork of this repository so that they can add their own work in progress as they work through the material.
 
 ## Summary
 
