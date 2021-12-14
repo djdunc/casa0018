@@ -20,7 +20,7 @@ for filename in os.listdir(directory):
     if filename.endswith(".wav"):
         song = AudioSegment.from_wav(os.path.join(directory, filename))
         play(song)
-        time.sleep(10)
+        time.sleep(2)
         continue
     else:
         continue

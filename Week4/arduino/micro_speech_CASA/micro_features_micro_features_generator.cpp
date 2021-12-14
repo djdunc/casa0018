@@ -13,6 +13,13 @@ See the License for the specific language governing permissions and
 limitations under the License.
 ==============================================================================*/
 
+
+
+/*
+  Performs the FFT and returns the audio frequency information Ch.7 p145
+*/
+
+
 #include "micro_features_micro_features_generator.h"
 
 #include <cmath>
