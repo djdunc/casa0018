@@ -13,6 +13,9 @@ See the License for the specific language governing permissions and
 limitations under the License.
 ==============================================================================*/
 
+// added for bug report https://github.com/tensorflow/tensorflow/pull/45878/commits/a5ec390b56bc7afaab4429bf0bd69dece30f8980
+// #include <algorithm>
+
 #include "feature_provider.h"
 
 #include "audio_provider.h"
@@ -60,8 +63,15 @@ TfLiteStatus FeatureProvider::PopulateFeatureData(
 
   // Quantize the time into steps as long as each window stride, so we can
   // figure out which audio data we need to fetch.
-  const int last_step = (last_time_in_ms / kFeatureSliceStrideMs);
-  const int current_step = (time_in_ms / kFeatureSliceStrideMs);
+  //const int last_step = (last_time_in_ms / kFeatureSliceStrideMs);
+  //const int current_step = (time_in_ms / kFeatureSliceStrideMs);
+  
+  // change based on bug report at https://github.com/tensorflow/tensorflow/pull/45878/commits/9fe6428a70ebb78fb471c5ddf8ff3d6fb7f8b14d
+  const int last_step = (last_time_in_ms - kFeatureSliceDurationMs) / kFeatureSliceStrideMs;
+  const int current_step = (time_in_ms - kFeatureSliceDurationMs) / kFeatureSliceStrideMs;
+   
+
+
 
   int slices_needed = current_step - last_step;
   // If this is the first call, make sure we don't use any cached information.
@@ -109,14 +119,27 @@ TfLiteStatus FeatureProvider::PopulateFeatureData(
   if (slices_needed > 0) {
     for (int new_slice = slices_to_keep; new_slice < kFeatureSliceCount;
          ++new_slice) {
+
+      
       const int new_step = (current_step - kFeatureSliceCount + 1) + new_slice;
+      // added for bug report https://github.com/tensorflow/tensorflow/pull/45878/commits/a5ec390b56bc7afaab4429bf0bd69dece30f8980
+      //const int new_step = std::max(0, (current_step - kFeatureSliceCount + 1) + new_slice);
+
+      
       const int32_t slice_start_ms = (new_step * kFeatureSliceStrideMs);
       int16_t* audio_samples = nullptr;
       int audio_samples_size = 0;
+      
+      
       // TODO(petewarden): Fix bug that leads to non-zero slice_start_ms
       GetAudioSamples(error_reporter, (slice_start_ms > 0 ? slice_start_ms : 0),
                       kFeatureSliceDurationMs, &audio_samples_size,
                       &audio_samples);
+      // added for bug report https://github.com/tensorflow/tensorflow/pull/45878/commits/a5ec390b56bc7afaab4429bf0bd69dece30f8980
+      //GetAudioSamples(error_reporter, slice_start_ms,
+      //                 kFeatureSliceDurationMs, &audio_samples_size,
+      //                 &audio_samples);                
+      
       if (audio_samples_size < kMaxAudioSampleSize) {
         TF_LITE_REPORT_ERROR(error_reporter,
                              "Audio data size %d too small, want %d",
