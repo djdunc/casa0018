@@ -149,7 +149,23 @@ void setup() {
 
 void loop() {
 
-  // Fetch the spectrogram for the current time.
+
+  /*
+   * The Loop has four main steps:
+   *  - read in audio, convert it into a spectogram to be passed into input layer
+   *  - invoke the interpreter to work out an output given an input
+   *  - convert the output back into variables we can use to take action
+   *  - map the output into a colour value for the LED
+   */
+
+
+  // Step 1 
+  // Fetch spectrogram (created from audio in using the PDM library) for the current time.
+  // Note: 
+  //    the PopulateFeatureData function in feature_provider.cpp calls 
+  //    the GetAudioSamples function in arduino_audio_provider.cpp 
+  //    (which in turn calls InitAudioRecording and then CaptureSamples
+  //  use find function to see where all these functions are...
   const int32_t current_time = LatestAudioTimestamp();
   int how_many_new_slices = 0;
   TfLiteStatus feature_status = feature_provider->PopulateFeatureData(
@@ -170,6 +186,10 @@ void loop() {
     model_input_buffer[i] = feature_buffer[i];
   }
 
+
+
+  
+  // Step 2 
   // Run the model on the spectrogram input and make sure it succeeds.
   TfLiteStatus invoke_status = interpreter->Invoke();
   if (invoke_status != kTfLiteOk) {
@@ -177,6 +197,10 @@ void loop() {
     return;
   }
 
+
+
+  
+  // Step 3
   // Obtain a pointer to the output tensor
   TfLiteTensor* output = interpreter->output(0);
   // Determine whether a command was recognized based on the output of inference
@@ -190,6 +214,11 @@ void loop() {
                          "RecognizeCommands::ProcessLatestResults() failed");
     return;
   }
+
+
+
+  
+  // Step 4
   // Do something based on the recognized command. The default implementation
   // just prints to the error console, but you should replace this with your
   // own function for a real application.
