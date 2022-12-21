@@ -47,6 +47,7 @@ Synthesis the main results and observations you made from building the project. 
 2. Last name, First initial. (Year published). Title. Edition. (Only include the edition if it is not the first edition) City published: Publisher, Page(s). http://google.com
 
 *Tip: we use [https://www.citethisforme.com](https://www.citethisforme.com) to make this task even easier.* 
+
 ----
 
 ## Declaration of Authorship
