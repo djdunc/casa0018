@@ -1,6 +1,6 @@
 # Micro Speech CASA
 
-In the week 5 worked example during the lecture we will be using the `micro_speech` example from the Harvard TinyML library: in Arduino IDE go to `File > Examples > Harvard_TinyMLx . micro_speech`
+In the week 5 worked example during the lecture we will be using the `micro_speech` example from the Harvard TinyML library: in Arduino IDE go to `File > Examples > Harvard_TinyMLx > micro_speech`
 
 In the Tutorial you will be developing your own wake word sketch using [Edge Impulse](www.edgeimpulse.com). We will use their [responding to your voice](https://docs.edgeimpulse.com/docs/tutorials/end-to-end-tutorials/responding-to-your-voice) tutorial as the basis for creating your first project. Their tutorial walks through the initial set-up required to connect your Arduino to their platform.
 
