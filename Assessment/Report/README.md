@@ -58,3 +58,5 @@ I, AUTHORS NAME HERE, confirm that the work presented in this assessment is my o
 *Digitally Sign by typing your name here*
 
 ASSESSMENT DATE
+
+Word count: 
